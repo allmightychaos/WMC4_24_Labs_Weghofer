@@ -1,27 +1,14 @@
-# WmcLabs
+# WMC Labs
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
+Basierend auf dem Lab1a Aufgaben PDF habe ich die Webseite dementsprechend gestaltet. 
 
-## Development server
+Falls etwa fehlt oder so, kann ich dies gerne nachholen bzw. bei den nächsten Abgabe direkt mitinkludieren, jedoch bis zum jetzigen Stand würde ich nichts wissen, das mir fehlen würde soweit. Da:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Funktionierende Navbar (mit Angular `routerLink`)
+2. Funktionierender Button (ebenso mit `routerLink`)
+3. Shop sollte soweit korrekt gemacht und Designed sein. Rammstein T-Shirt Logo wird einfach vom einem Online-Bild bezogen. 
 
-## Code scaffolding
+## LICENCE
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Weghofer Samuel
+4AHIF

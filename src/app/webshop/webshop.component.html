@@ -1,17 +1,25 @@
 <div class="container mt-4">
       <div class="row">
-            <div class="col-md-4" *ngFor="let product of products">
-                  <div class="card mb-4 shadow-sm">
-                        <img src="assets/images/product-placeholder.jpg" class="card-img-top" alt="Product Image">
-                        <div class="card-body">
-                              <h5 class="card-title">{{ product.name }}</h5>
-                              <p class="card-text">{{ product.description }}</p>
-                              <div class="d-flex justify-content-between align-items-center">
-                                    <span class="text-muted">{{ product.price | currency:'EUR' }}</span>
-                                    <button class="btn btn-sm btn-primary">In den Warenkorb</button>
-                              </div>
-                        </div>
-                  </div>
+        <div class="col-12 mb-3" *ngFor="let product of products">
+          <div class="d-flex align-items-center border p-3 shadow-sm">
+            <!-- Image -->
+            <div class="img-container">
+                  <img src="https://ramsteinmerch.com/wp-content/uploads/2024/01/39a.jpg" class="product-img me-3" alt="Product Image">
             </div>
+            
+            <!-- Middle content -->
+            <div class="flex-grow-1">
+              <h5 class="product-title mb-2">{{ product.name }}</h5>
+              <p class="product-description mb-0">{{ product.description }}</p>
+            </div>
+    
+            <!-- Price and button -->
+            <div class="text-end ms-3">
+              <span class="text-muted d-block mb-2">{{ product.price | currency:'EUR' }}</span>
+              <button class="btn btn-sm btn-primary">In den Warenkorb</button>
+            </div>
+          </div>
+        </div>
       </div>
-</div>
+    </div>
+    
