@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { CartService } from './cart.service';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'WMC Labs';
+  constructor(private cartService: CartService) { }
+
+  get cartCount(): number {
+    return this.cartService.getCartItems().length;
+  }
 }
