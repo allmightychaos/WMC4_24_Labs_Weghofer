@@ -10,10 +10,15 @@ export interface ApiResponse {
       };
 }
 
+
 @Injectable({
       providedIn: 'root'
 })
 export class ProductService {
+      searchProducts(query: string): Observable<Product[]> {
+            return this.http.get<Product[]>(`${this.apiUrl}?search=${query}`);
+      }
+
       private baseUrl = 'https://fakestoreapi.com';
 
       constructor(private http: HttpClient) { }

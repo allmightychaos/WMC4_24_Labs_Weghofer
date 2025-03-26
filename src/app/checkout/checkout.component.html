@@ -1,0 +1,59 @@
+<div class="container">
+      <h2>Checkout</h2>
+      <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                  <label for="salutation">Anrede</label>
+                  <select formControlName="salutation" id="salutation" class="form-control"
+                        [ngClass]="{'is-invalid': formSubmitted && checkoutForm.get('salutation')?.invalid}">
+                        <option value="Herr">Herr</option>
+                        <option value="Frau">Frau</option>
+                  </select>
+                  <div *ngIf="formSubmitted && checkoutForm.get('salutation')?.invalid" class="invalid-feedback">
+                        Bitte wählen Sie eine Anrede.
+                  </div>
+            </div>
+            <div class="form-group">
+                  <label for="firstName">Vorname</label>
+                  <input type="text" id="firstName" formControlName="firstName" class="form-control"
+                        [ngClass]="{'is-invalid': formSubmitted && checkoutForm.get('firstName')?.invalid}">
+                  <div *ngIf="formSubmitted && checkoutForm.get('firstName')?.invalid" class="invalid-feedback">
+                        Vorname ist erforderlich.
+                  </div>
+            </div>
+            <div class="form-group">
+                  <label for="lastName">Nachname</label>
+                  <input type="text" id="lastName" formControlName="lastName" class="form-control"
+                        [ngClass]="{'is-invalid': formSubmitted && checkoutForm.get('lastName')?.invalid}">
+                  <div *ngIf="formSubmitted && checkoutForm.get('lastName')?.invalid" class="invalid-feedback">
+                        Nachname ist erforderlich.
+                  </div>
+            </div>
+            <div class="form-group">
+                  <label for="street">Straße</label>
+                  <input type="text" id="street" formControlName="street" class="form-control"
+                        [ngClass]="{'is-invalid': formSubmitted && checkoutForm.get('street')?.invalid}">
+                  <div *ngIf="formSubmitted && checkoutForm.get('street')?.invalid" class="invalid-feedback">
+                        Straße ist erforderlich.
+                  </div>
+            </div>
+            <div class="form-group">
+                  <label for="postalCode">PLZ</label>
+                  <input type="text" id="postalCode" formControlName="postalCode" class="form-control"
+                        [ngClass]="{'is-invalid': formSubmitted && checkoutForm.get('postalCode')?.invalid}">
+                  <div *ngIf="formSubmitted && checkoutForm.get('postalCode')?.invalid" class="invalid-feedback">
+                        Bitte geben Sie eine gültige PLZ ein.
+                  </div>
+            </div>
+            <div class="form-group">
+                  <label for="city">Ort</label>
+                  <input type="text" id="city" formControlName="city" class="form-control"
+                        [ngClass]="{'is-invalid': formSubmitted && checkoutForm.get('city')?.invalid}">
+                  <div *ngIf="formSubmitted && checkoutForm.get('city')?.invalid" class="invalid-feedback">
+                        Ort ist erforderlich.
+                  </div>
+            </div>
+            <div *ngIf="orderError" class="alert alert-danger">{{ orderError }}</div>
+            <button type="button" class="btn btn-secondary" (click)="onCancel()">Abbrechen</button>
+            <button type="submit" class="btn btn-primary">Jetzt kaufen</button>
+      </form>
+</div>

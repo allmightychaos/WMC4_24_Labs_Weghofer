@@ -1,0 +1,14 @@
+<div class="container">
+      <h2>Bestellbestätigung</h2>
+      <p>Vielen Dank für Ihre Bestellung!</p>
+      <h3>Lieferadresse:</h3>
+      <p>{{ order.salutation }} {{ order.firstName }} {{ order.lastName }}</p>
+      <p>{{ order.street }}, {{ order.postalCode }} {{ order.city }}</p>
+      <h3>Produkte:</h3>
+      <ul>
+            <li *ngFor="let product of cart.products">
+                  {{ product.name }} – {{ product.quantity }}
+            </li>
+      </ul>
+      <!-- Buttons are hidden on this page -->
+</div>
